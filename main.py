@@ -1,37 +1,22 @@
 import uvicorn
-from typing import Optional
 from fastapi import FastAPI
-from pydantic import BaseModel
-
-
-class Item(BaseModel):
-    id: int
-    quantidade: int
-    descricao: str
-    valor: float
+from models.papel import Papel
 
 
 app = FastAPI()
 
-
 banco_de_dados = []
 
 
-@app.post("/item")
-def add_item(item: Item):
+@app.post("/papeis")
+def add_item(item: Papel):
     banco_de_dados.append(item)
     return item
 
 
-@app.get("/item")
+@app.get("/papeis")
 def list_item():
     return banco_de_dados
-
-
-@app.get("/item/valor-total")
-def get_valor_total():
-    valor_total = sum([item.valor *  item.quantidade for item in banco_de_dados])
-    return {"valor_total": valor_total}
 
 
 if __name__ == "__main__":
