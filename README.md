@@ -23,10 +23,21 @@ c) Install the dependences of project:
 pip install -r requirements.txt
 
 
-d) Run the project:
+d) Create database:
+(all times this script is executed, it will drop all tables)
+
+python criar_tabelas.py
+
+
+e) Run the project:
 
 uvicorn main:app --reload
 ```
+
+## Database
+
+The API use SQLite database.
+
 
 ## Swagger
 
