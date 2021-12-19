@@ -38,11 +38,13 @@ uvicorn main:app --reload
 
 The API use SQLite database.
 
-
 ## Swagger
 
 After the application goes up, open your browser on `localhost:8000/docs` to see the self-documented interactive API.
 
+## Tests
+
+`python -m pytest tests/`
 
 ## Files
 
