@@ -1,9 +1,9 @@
-import ormar
 from fastapi import APIRouter
 
 from controllers.utils.entidade_nao_encontrada import entidade_nao_encontrada
 from models.papel import Papel
 from models.requests.patch_papel import PapelUpdate
+
 
 router = APIRouter()
 
