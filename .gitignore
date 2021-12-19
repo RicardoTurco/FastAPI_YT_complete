@@ -7,9 +7,10 @@ __pycache__/
 
 .idea/
 
-# Database
+# Databases
 
 db.sqlite
+testedb.sqlite
 
 # C extensions
 *.so
